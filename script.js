@@ -11,7 +11,6 @@ document.getElementById('add-task').addEventListener('click', function() {
         if (this.checked) {
             taskItem.classList.add('completed');
             document.getElementById('task-list').appendChild(taskItem);
-            // Toca um som de 'ding' quando a tarefa é marcada como concluída
             new Audio('ding.mp3').play();
         } else {
             taskItem.classList.remove('completed');
@@ -26,7 +25,7 @@ document.getElementById('add-task').addEventListener('click', function() {
     deleteButton.className = 'delete';
     deleteButton.addEventListener('click', function() {
         taskItem.style.backgroundColor = '#fdd';
-        new Audio('delete.wav').play(); // Toca o som ao deletar a tarefa
+        new Audio('delete.wav').play();
         setTimeout(() => taskItem.remove(), 500);
     });
 
@@ -35,6 +34,6 @@ document.getElementById('add-task').addEventListener('click', function() {
     taskItem.appendChild(deleteButton);
 
     document.getElementById('task-list').appendChild(taskItem);
-    new Audio('add.wav').play(); // Toca o som ao adicionar a tarefa
+    new Audio('add.wav').play();
     document.getElementById('new-task').value = '';
 });
